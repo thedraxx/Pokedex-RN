@@ -5,7 +5,9 @@ import { PokeImage, Title } from './style';
 
 function HomeScreen() {
   const { top } = useSafeAreaInsets();
-  usePokemonPaginated();
+  const { isLoading, simplePokemonList } = usePokemonPaginated();
+  console.log(simplePokemonList);
+  console.log(isLoading);
 
   return (
     <>

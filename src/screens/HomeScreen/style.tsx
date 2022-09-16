@@ -16,4 +16,5 @@ export const Title = styled.Text`
     font-weight: bold;
     top: ${(props: { top: number; }) => props.top + 20}px;
     color: black;
+    margin-bottom: ${(props: { top: number; }) => props.top + 20}px;
 `;

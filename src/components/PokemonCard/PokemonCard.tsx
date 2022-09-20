@@ -18,7 +18,7 @@ function PokemonCard({ pokemon }:Props) {
   const navigation = useNavigation();
 
   const obtainColor = async () => {
-    if (isMounted.current) return;
+    // if (isMounted.current) return;
     const result = await ImageColors.getColors(pokemon.picture);
     setBgColor(result.platform === 'android'
       ? result.dominant || 'gray'

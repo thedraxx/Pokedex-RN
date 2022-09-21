@@ -1,9 +1,12 @@
 import React from 'react';
-import Navigator from './src/navigator/Navigator';
+import { NavigationContainer } from '@react-navigation/native';
+import MyTabs from './src/navigator/Tabs';
 
 function App() {
   return (
-    <Navigator />
+    <NavigationContainer>
+      <MyTabs />
+    </NavigationContainer>
   );
 }
 

@@ -4,7 +4,12 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Container, TextBackground, TextInputCustom } from './style';
 import useDebounceValue from '../../hook/useDebounceValue';
 
-function SearchInput() {
+interface Props {
+  // eslint-disable-next-line no-unused-vars
+  onDebounce: (value: string) => void;
+}
+
+function SearchInput({ onDebounce }: Props) {
   const { top } = useSafeAreaInsets();
 
   const [textValue, setTextValue] = useState('');
@@ -12,7 +17,7 @@ function SearchInput() {
   const debouncedValue = useDebounceValue(textValue, 500);
 
   useEffect(() => () => {
-    console.log(debouncedValue);
+    onDebounce(debouncedValue);
   }, [debouncedValue]);
 
   return (

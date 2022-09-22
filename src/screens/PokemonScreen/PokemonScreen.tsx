@@ -4,9 +4,12 @@ import { StackScreenProps } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { View, ActivityIndicator } from 'react-native';
-import { RootStackParams } from '../../navigator/Navigator';
+import { RootStackParams } from '../../navigator/Tab1';
 import {
-  ButtonBack, ContainerPokemon, PokeballImage, PokemonName,
+  ButtonBack,
+  ContainerPokemon,
+  PokeballImage,
+  PokemonName,
 } from './style';
 import FadeInImage from '../../components/FadeInImage';
 import usePokemon from '../../hook/usePokemon';

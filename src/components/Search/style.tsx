@@ -2,7 +2,10 @@ import styled from 'styled-components/native';
 import { Platform } from 'react-native';
 
 export const Container = styled.View`
-    
+    position: absolute;
+    z-index:999;
+    width: 100%;
+    margin-top: ${(props: { top: number }) => (Platform.OS === 'ios' ? props.top : props.top + 20)}px;
 `;
 
 export const TextBackground = styled.View`

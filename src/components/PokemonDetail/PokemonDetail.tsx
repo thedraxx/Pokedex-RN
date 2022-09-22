@@ -84,14 +84,16 @@ function PokemonDetail({ pokemon }: Props) {
 
               <Text
                 key={stat.stat.name}
-                style={{ width: 150, fontSize: 15 }}
+                style={{ width: 150, fontSize: 15, color: 'black' }}
               >
                 {`${stat.stat.name} `}
               </Text>
 
               <Text
                 key={stat.base_stat}
-                style={{ fontWeight: 'bold', width: 150, fontSize: 15 }}
+                style={{
+                  fontWeight: 'bold', width: 150, fontSize: 15, color: 'black',
+                }}
               >
                 {`${stat.base_stat} `}
               </Text>
